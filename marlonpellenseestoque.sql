@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Fev-2025 às 18:09
+-- Tempo de geração: 07-Fev-2025 às 21:03
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -37,7 +37,7 @@ CREATE TABLE `cliente` (
   `CEP` varchar(10) NOT NULL COMMENT 'Campo responsável pelo CEP do cliente.',
   `CNPJ` varchar(30) NOT NULL COMMENT 'Campo responsável pelo CNPJ do cliente.',
   `UF` char(2) NOT NULL COMMENT 'Campo responsável pelo UF do cliente.',
-  `IE` int(10) NOT NULL COMMENT 'Campo responsável pelo IE do cliente.'
+  `IE` int(10) DEFAULT NULL COMMENT 'Campo responsável pelo IE do cliente.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
@@ -46,10 +46,10 @@ CREATE TABLE `cliente` (
 
 INSERT INTO `cliente` (`Cod_Cliente`, `Nome_Cliente`, `Endereco`, `Cidade`, `CEP`, `CNPJ`, `UF`, `IE`) VALUES
 (20, 'Beth', 'Av Climério n. 45', 'São Paulo', '25679-300', '32485126/7326-08', 'SP', 9280),
-(110, 'Jorge', 'Rua Caiapó 13', 'Curitiba', '30078-500', '14512764/9834-09', 'PR', 3485),
+(110, 'Jorge', 'Rua Caiapó 13', 'Curitiba', '30078-500', '14512764/9834-09', 'PR', NULL),
 (130, 'Edmar', 'Rua da Prais 564', 'Salvador', '30079-300', '23463284/2349-04', 'BA', 7121),
 (157, 'Paulo', 'Av. Moraes c/3', 'Londrina', '30127-580', '32848223/3242-06', 'PR', 1923),
-(180, 'Livio', 'Av. Beira Mar n.1256', 'Florianópolis', '30077-500', '12736571/2347-04', 'SC', 7324),
+(180, 'Livio', 'Av. Beira Mar n.1256', 'Florianópolis', '30077-500', '12736571/2347-04', 'SC', NULL),
 (222, 'Lúcia', 'Rua Itabira 123 loja 09', 'Belo Horizonte', '22124-391', '28315213/9348-08', 'MG', 2985),
 (234, 'José', 'Quadra 3 bl. 3 sl 1003', 'Brasilia', '22841-650', '21763576/1232-03', 'DF', 2931),
 (260, 'Susana', 'Rua Lopes Mendes 12', 'Niterói', '30046-500', '21763571/2329-08', 'RJ', 2530),
